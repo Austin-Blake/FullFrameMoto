@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="reset.css" type="text/css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="WCP Website\Whiskey Jug Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="index.css" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -21,9 +21,9 @@
       </div>
       <nav class="nav">
         <ul class="list">
-          <li class="mission">Home</li>
-          <li class="home">Projects</li>
-          <li class="about">About</li>
+          <a href="#"><li class="mission">Home</li></a>
+          <a href="#project-section"><li class="home">Projects</li></a>
+          <a href="#staff-section"><li class="about">About</li></a>
         </ul>
       </nav>
     </div>
@@ -36,6 +36,7 @@
     <div class="banner_container">
       <div class="banner">
         <img class="banner-img" src="WCP Website\untitled-1-4-2.jpg" alt="media not supported"/>
+        <p>Quote goes here</p>
       </div>
     </div>
     <main class="main">
@@ -44,23 +45,51 @@
         <p>Born and raised in the backwoods of Indiana, photographer Blake Hall quickly grew an affinity for all things with an engine. Becoming deeply embedded in motorcycle culture, he saw a need for quality, photography with a lifestyle vibe, for the community & their motorcycles. Full Frame Moto "WCP" exists to fill that void in photography, crafted with a passion. </p>
       </div>
       
-      <section class="images"> 
-      <div class="bike-container">
-        <div class="spacer">
-          <div class="cards">
-            <div class="col">
-              <img id="caferacer" src="WCP Website\20190105-DSC_1859.jpg" alt="media not supported">
-              <img id="solo-tree" src="WCP Website\DSC00615.jpg" alt="media not supported">
-              <img id="orange tank" src="WCP Website\DSC00332.jpg" alt="media not supported">
+      <a><section id="project-section" class="images"></a> 
+        <div class="bike-container">
+          <div class="spacer">
+            <div class="cards">
+              <div class="col" id="row-one">
+                <img id="caferacer" src="WCP Website\20190105-DSC_1859.jpg" alt="media not supported">
+                <img id="solo-tree" src="WCP Website\DSC00615.jpg" alt="media not supported">
+                <img id="orange-tank" src="WCP Website\DSC00332.jpg" alt="media not supported">
+                <img id="orange-tank" src="">
+              </div>
+              <div class="col" id="row-two">
+                <img id="side-view-cone" src="WCP Website\DSC00523.jpg" alt="media not supported">
+                <img id="front-view-cone" src="WCP Website\DSC00521.jpg" alt="media not supported">
+              </div>
+              <div class="col" id="row-three">
+                <img id="front-wheelie1" src="WCP Website\20190105-DSC_1717.jpg" alt="media not supported">
+                <img id="back-wheelie" src="WCP Website\20190105-DSC_1743.jpg" alt="media not supported">
+                <img id="front-wheelie2" src="WCP Website\20190105-DSC_1763.jpg" alt="media not supported">
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </section>
-    </main>
+      </main>
 
-
-
-    
+      <a><article id="staff-section" class="staff"></a>
+        <div>
+          <h3>Founder / Photographer</h3>
+        </div>
+        <div class="staff-img">
+          <img src="WCP Website\DSC_2109-5.jpg" alt="media not supported">
+          <p>Blake Hall</p>
+        </div>
+        </div>
+    </article>
+    <footer class="footer">
+      <nav class="footer-nav">
+        <ul class="list">
+          <a href="#"><li class="mission">Home</li></a>
+          <a href="#project-section"><li class="home">Projects</li></a>
+          <a href="#staff-section"><li class="about">About</li></a>
+        </ul>
+      </nav>
+      
+    </footer>
+      
   </body>
 </html>
