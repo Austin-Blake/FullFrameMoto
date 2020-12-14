@@ -209,12 +209,17 @@ body {
     height: auto;
 }
 
-.staff p {
-    margin: 1rem 5rem;
+.staff-img p {
+    padding-left: 3rem;
 }
 
 .staff-info {
     font-family: "Vollkorn", sans-serif;
+}
+
+.staff-info p {
+    max-width: 38rem;
+    margin: 1rem 3rem;
 }
 
 .footer {
