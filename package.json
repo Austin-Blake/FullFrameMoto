@@ -1,0 +1,22 @@
+{
+  "name": "full_frame_moto",
+  "version": "1.0.0",
+  "description": "Photography Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Austin-Blake/FullFrameMoto.git"
+  },
+  "author": "Austin-Blake",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Austin-Blake/FullFrameMoto/issues"
+  },
+  "homepage": "https://github.com/Austin-Blake/FullFrameMoto#readme",
+  "dependencies": {
+    "animejs": "^3.2.1"
+  }
+}
