@@ -1,4 +1,3 @@
-
 import anime from './node_modules/animejs/lib/anime.es.js';
 
 const hero = document.getElementsByClassName('freedom');
@@ -12,8 +11,6 @@ const frontWheelie1 = document.getElementById('front-wheelie1');
 const backWheelie = document.getElementById('back-wheelie');
 const frontWheelie2 = document.getElementById('front-wheelie2');
 
-const projects = document.getElementById('project-section');
-
 const spin = anime.timeline({
     easing: 'easeOutQuad',
     duration: 600,    
@@ -22,8 +19,7 @@ spin.add({
     targets: cafeRacer,
     translateX: 20,
     translateY: 60
-})
-    .add({
+}).add({
         targets: soloTree,
         translateX: 0,
         translateY: 60,
