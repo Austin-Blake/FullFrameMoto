@@ -46,7 +46,7 @@ body {
 }
 
 .list a {
-    cursor:pointer:
+    cursor:pointer;
 }
 
 .list a li:hover {
@@ -83,10 +83,6 @@ body {
     border-top: .1rem solid #b28e5c;
 }
 
-.banner {
-    
-}
-
 .banner_container {
     position: relative;
     overflow: hidden;
@@ -97,8 +93,6 @@ body {
     bottom: 15%;
     left: 8%;
     display: flex;
-    
-    
 }
 
 .freedom {
