@@ -2,6 +2,7 @@ import anime from './node_modules/animejs/lib/anime.es.js';
 
 const hero = document.getElementsByClassName('freedom');
 
+
 const cafeRacer = document.getElementById('caferacer');
 const soloTree = document.getElementById('solo-tree');
 const orangeTank = document.getElementById('orange-tank');
@@ -11,57 +12,49 @@ const frontWheelie1 = document.getElementById('front-wheelie1');
 const backWheelie = document.getElementById('back-wheelie');
 const frontWheelie2 = document.getElementById('front-wheelie2');
 
-const spin = anime.timeline({
-    easing: 'easeOutQuad',
-    duration: 600,    
-});
-spin.add({
-    targets: cafeRacer,
-    translateX: 20,
-    translateY: 60
-}).add({
-        targets: soloTree,
-        translateX: 0,
-        translateY: 60,
-        
-    }).add({
-        targets: orangeTank,
-        translateX: -20,
-        translateY: 60,
-    }).add({
-        targets: sideViewCone,
-        translateX: 35,
-        translateY: 0
-    }).add({
-        targets: frontViewCone,
-        translateX: -35,
-        translateY: 10
-    }).add({
-        targets: frontWheelie1,
-        translateX: 15,
-        translateY: -55
-    }).add({
-        targets: backWheelie,
-        translateX: 0,
-        translateY: -55
-    }).add({
-        targets: frontWheelie2,
-        translateX: -15,
-        translateY: -55
-    })
-
-document.onscroll = spin.play;
-
 const freedom = anime({
     targets: hero,
-    scale: 1.2,
-    translateX: 25,
+    translateY: [-1000, 0],
     rotate: '1turn',
     endDelay: 1000,
     direction: "alternate",
-    loop: true,
-  delay: anime.stagger(160) // increase delay by 100ms for each elements.
+    duration: 2000,
+    rotate: [135, 0],
+    autoplay: false,
+    delay: anime.stagger(160),
+    
 });
 
-// document.onscroll = freedom.play;
+document.addEventListener('scroll', freedom.play);
+
+anime({
+    targets: [
+        cafeRacer,
+        soloTree,
+        orangeTank,
+        sideViewCone,
+        frontViewCone,
+        frontWheelie1,
+        backWheelie,
+        frontWheelie2,
+    ],
+    opacity: [.5, 0, .5, 1],
+    duration: 5000,
+    delay: anime.stagger(300),
+    endDelay: 2000,
+    easing: 'easeOutInSine',
+    loop: true,
+});
+
+const jug = document.getElementById('jug');
+
+anime({
+    targets: jug,
+    rotate: [0, -30, 30, -15, 15, 0],
+    easing: 'easeInQuad',
+    duration: 4000,
+    delay: 5000,
+    loop: true,
+});
+
 

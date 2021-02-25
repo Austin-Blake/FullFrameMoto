@@ -29,7 +29,8 @@ body {
     display: inline-flex;
     width: auto;
     height: 5em;
-    background-color: #b28e5c;
+    background-color: #f1f1f1c7;
+    padding: .3rem;
     border-radius: 2rem;    
 }
 
@@ -61,7 +62,7 @@ body {
     flex-direction: column;
     text-align: center;
     max-width: 100%;
-    padding-top: 3rem;
+    padding-top: 1rem;
     background-color: #000000;
     color: #b28e5c;
 }
@@ -96,7 +97,6 @@ body {
 }
 
 .freedom {
-    
     font-family: "Vollkorn",sans-serif;
     font-size: 10vw;
     color:white;
@@ -104,8 +104,8 @@ body {
 }
 
 .banner-img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .main-about {
@@ -131,64 +131,52 @@ body {
 }
 
 .cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: center;
-    max-width: 100%;
-    max-height: auto;
+    height: 150vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+    grid-template-rows: repeat(7, 1fr);
+    gap: .3rem;
+    grid-template-areas:
+    "one two three"
+     "one two three"
+     "four two five"
+     "four . five"
+     "four seven five"
+     "six seven eight"
+     "six seven eight";
 }
 
-.bike-img:hover {
-    transition: all 1000ms;
+#caferacer{
+    grid-area: one;
 }
-
-.col img {
-    max-width: 30%;
-    max-height: auto;
-}
-
-#row-one {
-    display: flex;
-    flex-shrink: 1;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 1rem;
-    margin-bottom: -1rem;
-}
-
 #solo-tree {
-    margin:0 3%;
-    margin-bottom: -10%;
+    grid-area: two;
+}
+#orange-tank{
+    grid-area: three;
+}
+#side-view-cone{
+    grid-area: four;
+}
+#front-view-cone{
+    grid-area: five;
+}
+#front-wheelie1{
+    grid-area: six;
+}
+#back-wheelie{
+    grid-area: seven;
+}
+#front-wheelie2{
+    grid-area: eight;
 }
 
-#row-two {
-    display: flex;
-    flex-shrink: 1;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0rem;
+.bike-img {
+    height: 100%;
+    width: 100%;
 }
 
-#row-three {
-    display: flex;
-    flex-shrink: 1;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-evenly;
-    margin-top: -15%;
-    padding-bottom: 2rem;
-    border-bottom: 3px solid #b28e5c;
-}
 
 .staff {
     display: flex;
@@ -213,7 +201,7 @@ body {
 }
 
 .staff img {
-    max-width: 33%;
+    max-width: 50%;
     height: auto;
 }
 
@@ -228,6 +216,23 @@ body {
 .staff-info p {
     max-width: 38rem;
     margin: 1rem 3rem;
+}
+
+.staff-img-container{
+    background-color: rgba(147, 1, 1, 0.449);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#jug {
+    height: 100%;
+    width: 100rem;
+    padding: 2rem;
+    border-radius: 30%;
 }
 
 .footer {
@@ -248,6 +253,35 @@ body {
 
 .footer li {
     flex-shrink: 2;
-    flex-grow: 1;
+    flex-grow: 1;   
+}
+
+@media only screen and (min-width: 320px) and (max-width: 650px){
+    .banner-img {
+    width: 100vw;
+    height: 80%;
+    }
     
+    #front-wheelie1{
+        display: none;
+    }
+    #back-wheelie{
+        display: none;
+    }
+    #front-wheelie2{
+        display: none;
+    }
+
+    .bike-img {
+        height: 100%;
+        width: 90%;
+    }
+    .cards {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
 }
